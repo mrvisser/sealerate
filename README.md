@@ -3,6 +3,17 @@
 
 Sealerate is a simple library that provides a convenience function `values[T]` that dynamically creates a set of all instances of a sealed class.
 
+## Set Up
+
+Sealerate is available for both Scala 2.10 and 2.11. If you are using sbt,
+simply add the following to your `build.sbt`:
+
+```
+resolvers += "Pellucid Bintray" at "http://dl.bintray.com/pellucid/maven"
+
+libraryDependencies += "com.pellucid" %% "sealerate" % "0.0.1"
+```
+
 ## Example Usage
 
 ```scala
