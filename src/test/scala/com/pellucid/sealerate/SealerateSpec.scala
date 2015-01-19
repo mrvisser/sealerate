@@ -15,5 +15,9 @@ class SealerateSpec extends path.FunSpec with Matchers {
     it("should allow a companion object to bind to it") {
       GenInternalValues.items should be(Set(GenInternalValues.Item1, GenInternalValues.Item2))
     }
+
+    it("should give an empty set for a sealed trait with no instances") {
+      values[SealedTraitEmpty] should be(Set.empty[SealedTraitEmpty])
+    }
   }
 }
