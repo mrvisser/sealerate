@@ -17,7 +17,7 @@ libraryDependencies += "com.pellucid" %% "sealerate" % "0.0.1"
 ## Example Usage
 
 ```scala
-import example
+package example
 
 import com.pellucid.sealerate
 
