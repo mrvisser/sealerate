@@ -30,6 +30,11 @@ Note that a compilation error is thrown if the following conditions aren't met:
 * The given type `T` is not a sealed trait, sealed abstract class or sealed class
 * The case instances of type `T` are not all `case object`s
 
+## Contributors
+
+* Travis Brown (library based on his [StackOverflow post](http://stackoverflow.com/a/13672520))
+* Branden Visser (core maintainer)
+
 ## License
 
 This software is licensed under the Apache 2 license, quoted below.
