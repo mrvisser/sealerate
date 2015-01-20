@@ -34,7 +34,7 @@ object Switch {
 
 ```
 
-Now `Switch.values` will provide `Set(On, Off)`, and wil update automatically when new objects are added.
+Now `Switch.values` will provide `Set(On, Off)`, and will update automatically when new objects are added.
 
 Note that a compilation error is thrown if the following conditions aren't met:
 
