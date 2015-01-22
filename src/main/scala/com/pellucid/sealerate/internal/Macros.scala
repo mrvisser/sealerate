@@ -5,6 +5,24 @@ import com.pellucid.sealerate.macrocompat
 object Macros {
 
   /**
+   * Permutation of the object instance collector that throws an error if there
+   * are any `case class` instances.
+   *
+   * @see [[internalValuesImpl]]
+   */
+  def valuesImpl[T: c.WeakTypeTag](c: macrocompat.Context): c.Expr[Set[T]] =
+    internalValuesImpl(filterCaseClass = false)(c)
+
+  /**
+   * Permutation of the object instance collector that silently filters out any
+   * `case class` instances.
+   *
+   * @see [[internalValuesImpl]]
+   */
+  def collectImpl[T: c.WeakTypeTag](c: macrocompat.Context): c.Expr[Set[T]] =
+    internalValuesImpl(filterCaseClass = true)(c)
+
+  /**
    * The actual macro that handles extracting object instances of a sealed
    * class.
    *
@@ -13,7 +31,7 @@ object Macros {
    * @return    An instance of a set that contains all known object instances
    *            for the type [[T]]
    */
-  def valuesImpl[T: c.WeakTypeTag](c: macrocompat.Context): c.Expr[Set[T]] = {
+  private[this] def internalValuesImpl[T: c.WeakTypeTag](filterCaseClass: Boolean)(c: macrocompat.Context): c.Expr[Set[T]] = {
     import c.universe._
 
     val enumTpe = weakTypeOf[T].typeSymbol
@@ -25,11 +43,14 @@ object Macros {
 
     val enumClass = enumTpe.asClass
     val enumClassChildren = enumClass.knownDirectSubclasses.toList
+    val enumModuleChildren = enumClassChildren.filter(_.isModuleClass)
 
     // All known direct subclasses must be `case object`s, because we cannot
-    // generate instances of case classes that take parameters
-    if (!enumClassChildren.forall(_.isModuleClass)) {
-      c.abort(c.enclosingPosition, "All childrens must be objects.")
+    // generate instances of case classes that take parameters. Depending on
+    // the value of `filterCaseClass`, we will either filter out the class
+    // permutations or throw a compilation error
+    if (!filterCaseClass && enumClassChildren.size != enumModuleChildren.size) {
+      c.abort(c.enclosingPosition, "All children must be objects.")
     }
 
     // Generate an expression that passes all case object instances into a Set
@@ -39,7 +60,7 @@ object Macros {
           reify(Set).tree,
           macrocompat.termName(c)("apply")
         ),
-        enumClassChildren.map(child => Ident(child.asClass.module))
+        enumModuleChildren.map(child => Ident(child.asClass.module))
       )
     )
   }
