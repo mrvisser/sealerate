@@ -43,7 +43,32 @@ object Macros {
 
     val enumClass = enumTpe.asClass
     val enumClassChildren = enumClass.knownDirectSubclasses.toList
+
+    /**
+     * There are some potential issues with `knownDirectSubclasses`. Let's try
+     * and alleviate some pain by warning when it turns out to be empty.
+     */
+    if (enumClassChildren.isEmpty) {
+      c.warning(
+        c.enclosingPosition,
+        s"""
+          | Enumeration generation for type $enumClass failed to find any
+          | instances. There are bugs in scala macros that may lead to this:
+          |
+          |  * If you are generating instances of a sealed class that extends
+          |    another class, this does not work; or
+          |
+          |  * If you assign the generated instances to a `val` instead of a
+          |    `def`, then the generated instances will be empty
+          |
+        """.stripMargin
+      )
+    }
+
+
     val enumModuleChildren = enumClassChildren.filter(_.isModuleClass)
+
+
 
     // All known direct subclasses must be `case object`s, because we cannot
     // generate instances of case classes that take parameters. Depending on
