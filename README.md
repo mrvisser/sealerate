@@ -11,7 +11,7 @@ simply add the following to your `build.sbt`:
 ```
 resolvers += "Pellucid Bintray" at "http://dl.bintray.com/pellucid/maven"
 
-libraryDependencies += "com.pellucid" %% "sealerate" % "0.0.1"
+libraryDependencies += "com.pellucid" %% "sealerate" % "0.0.2"
 ```
 
 ## Example Usage
