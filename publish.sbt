@@ -1,7 +1,3 @@
-useGpg := true
-
-usePgpKeyHex("D2851404")
-
 publishMavenStyle := true
 
 publishTo := {
@@ -13,3 +9,7 @@ publishTo := {
 }
 
 pomIncludeRepository := { _ => false }
+
+useGpg := true
+
+usePgpKeyHex("D2851404")
