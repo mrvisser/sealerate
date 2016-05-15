@@ -1,6 +1,8 @@
 
 ## Sealerate
 
+[![Build Status](https://travis-ci.org/mrvisser/sealerate.png?branch=master)](https://travis-ci.org/mrvisser/sealerate)
+
 Sealerate is a small (3rd-party-dependency-free) library that provides a
 convenience function `values[T]` that dynamically creates a set of all instances
 of a sealed class.
