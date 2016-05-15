@@ -1,12 +1,14 @@
 
 ## Sealerate
 
-Sealerate is a simple library that provides a convenience function `values[T]` that dynamically creates a set of all instances of a sealed class.
+Sealerate is a small (3rd-party-dependency-free) library that provides a
+convenience function `values[T]` that dynamically creates a set of all instances
+of a sealed class.
 
 ## Set Up
 
-Sealerate is available for both Scala 2.10 and 2.11. If you are using sbt,
-simply add the following to your `build.sbt`:
+Sealerate is available for both Scala 2.10 and 2.11. If you are using sbt, add
+the following to your `build.sbt`:
 
 ```
 resolvers += Resolver.sonatypeRepo("releases")
