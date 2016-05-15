@@ -1,7 +1,6 @@
-package com.pellucid.sealerate
+package ca.mrvisser.sealerate
 
-import org.scalatest.Matchers
-import org.scalatest.path
+import org.scalatest.{Matchers, path}
 
 class SealerateSpec extends path.FunSpec with Matchers {
 

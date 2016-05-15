@@ -1,7 +1,15 @@
+useGpg := true
 
-bintrayPublishSettings
+usePgpKeyHex("D2851404")
 
-bintray.Keys.bintrayOrganization in bintray.Keys.bintray := Some("pellucid")
+publishMavenStyle := true
 
-bintray.Keys.packageLabels in bintray.Keys.bintray := Seq("scala", "enum", "enumerate",
-  "enumerator", "sealed trait", "sealed abstract class")
+publishTo := {
+  val nexus = "https://oss.sonatype.org/"
+  if (isSnapshot.value)
+    Some("snapshots" at nexus + "content/repositories/snapshots")
+  else
+    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+}
+
+pomIncludeRepository := { _ => false }

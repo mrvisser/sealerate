@@ -1,8 +1,24 @@
-organization := "com.pellucid"
+organization := "ca.mrvisser"
 
 name := "sealerate"
 
 licenses += ("Apache-2.0", url("http://opensource.org/licenses/Apache-2.0"))
+
+homepage := Some(url("https://github.com/mrvisser/sealerate"))
+
+pomExtra := {
+  <scm>
+    <url>git@github.com:mrvisser/sealerate.git</url>
+    <connection>scm:git:git@github.com:mrvisser/sealerate.git</connection>
+  </scm>
+  <developers>
+    <developer>
+      <id>mrvisser</id>
+      <name>Branden Visser</name>
+      <url>https://github.com/mrvisser</url>
+    </developer>
+  </developers>
+}
 
 scalaVersion := "2.11.2"
 

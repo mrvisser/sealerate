@@ -1,4 +1,4 @@
-package com.pellucid.sealerate
+package ca.mrvisser.sealerate
 
 sealed trait SealedTraitCaseClasses
 

@@ -1,4 +1,4 @@
-package com.pellucid.sealerate
+package ca.mrvisser.sealerate
 
 package object macrocompat {
   type Context = scala.reflect.macros.Context
