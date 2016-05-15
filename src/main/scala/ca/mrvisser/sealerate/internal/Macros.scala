@@ -59,7 +59,11 @@ object Macros {
            |    another class, this does not work; or
            |
            |  * If you assign the generated instances to a `val` instead of a
-           |    `def`, then the generated instances will be empty
+           |    `def`, then the generated instances will be empty; or
+           |
+           |  * If the macro call (`sealerate.values[T]`) is made before the
+           |    `case object` definitions, the generated instances will be
+           |    empty
            |
       """.stripMargin
       )
