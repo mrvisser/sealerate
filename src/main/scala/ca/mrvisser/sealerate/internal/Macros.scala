@@ -55,10 +55,10 @@ object Macros {
            | Enumeration generation for type $enumClass failed to find any
            | instances. There are bugs in scala macros that may lead to this:
            |
-        |  * If you are generating instances of a sealed class that extends
+           |  * If you are generating instances of a sealed class that extends
            |    another class, this does not work; or
            |
-        |  * If you assign the generated instances to a `val` instead of a
+           |  * If you assign the generated instances to a `val` instead of a
            |    `def`, then the generated instances will be empty
            |
       """.stripMargin
