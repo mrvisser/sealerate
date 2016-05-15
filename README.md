@@ -36,11 +36,13 @@ object Switch {
 
 ```
 
-Now `Switch.values` will provide `Set(On, Off)`, and will update automatically when new objects are added.
+Now `Switch.values` will provide `Set(On, Off)`, and will update automatically
+when new objects are added.
 
 Note that a compilation error is thrown if the following conditions aren't met:
 
-* The given type `T` is not a sealed trait, sealed abstract class or sealed class
+* The given type `T` is not a sealed trait, sealed abstract class or sealed
+  class
 * The case instances of type `T` are not all `case object`s
 
 ## Contributors
