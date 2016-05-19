@@ -13,7 +13,7 @@ Sealerate is available for both Scala 2.10 and 2.11. If you are using sbt, add
 the following to your `build.sbt`:
 
 ```
-libraryDependencies += "ca.mrvisser" %% "sealerate" % "0.0.3"
+libraryDependencies += "ca.mrvisser" %% "sealerate" % "0.0.4"
 ```
 
 ## Example Usage
