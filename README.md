@@ -9,11 +9,11 @@ of a sealed class.
 
 ## Set Up
 
-Sealerate is available for both Scala 2.10 and 2.11. If you are using sbt, add
+Sealerate is available for Scala 2.10, 2.11 and 2.12. If you are using sbt, add
 the following to your `build.sbt`:
 
 ```
-libraryDependencies += "ca.mrvisser" %% "sealerate" % "0.0.4"
+libraryDependencies += "ca.mrvisser" %% "sealerate" % "0.0.5"
 ```
 
 ## Example Usage
