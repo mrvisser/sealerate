@@ -20,9 +20,9 @@ pomExtra := {
   </developers>
 }
 
-scalaVersion := "2.12.0"
+scalaVersion := "2.12.1"
 
-crossScalaVersions := Seq("2.10.4", "2.11.8", "2.12.0")
+crossScalaVersions := Seq("2.10.4", "2.11.8", "2.12.1")
 
 scalacOptions ++= Seq(
   "-Xlint",
@@ -38,7 +38,7 @@ resolvers ++= Seq(
   Resolver.sonatypeRepo("snapshots")
 )
 
-libraryDependencies <+= scalaVersion("org.scala-lang" % "scala-compiler" % _)
+libraryDependencies += scalaVersion("org.scala-lang" % "scala-compiler" % _).value
 
 libraryDependencies ++= Seq(
   Dependencies.Test.scalaTest
