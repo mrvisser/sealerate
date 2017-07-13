@@ -1,5 +1,5 @@
-
-## Sealerate
+Sealerate
+=========
 
 [![Build Status](https://travis-ci.org/mrvisser/sealerate.png?branch=master)](https://travis-ci.org/mrvisser/sealerate)
 
@@ -33,7 +33,6 @@ object Switch {
      */
     def values: Set[Switch] = sealerate.values[Switch]
 }
-
 ```
 
 Now `Switch.values` will provide `Set(On, Off)`, and will update automatically
