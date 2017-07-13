@@ -4,7 +4,7 @@ object Dependencies {
 
   object Version {
     val macros = "2.1.0"
-    val scalaTest = "3.0.1"
+    val scalaTest = "3.0.3"
     val typesafeConfig  = "1.2.1"
   }
 
