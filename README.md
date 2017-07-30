@@ -1,10 +1,12 @@
-
-## Sealerate
+Sealerate
+=========
 
 [![Build Status](https://travis-ci.org/mrvisser/sealerate.png?branch=master)](https://travis-ci.org/mrvisser/sealerate)
+![Current Version](https://img.shields.io/badge/version-0.0.5-brightgreen.svg?style=flat "0.0.5")
+[![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202-blue.svg)](LICENSE)
 
-Sealerate is a small (3rd-party-dependency-free) library that provides a
-convenience function `values[T]` that dynamically creates a set of all instances
+Sealerate is a small (3rd-party-dependency-free) library that provides convenience
+functions `values[T]` and `collect[T]` that dynamically create a set of all instances
 of a sealed class.
 
 ## Set Up
@@ -33,7 +35,6 @@ object Switch {
      */
     def values: Set[Switch] = sealerate.values[Switch]
 }
-
 ```
 
 Now `Switch.values` will provide `Set(On, Off)`, and will update automatically
@@ -43,7 +44,9 @@ Note that a compilation error is thrown if the following conditions aren't met:
 
 * The given type `T` is not a sealed trait, sealed abstract class or sealed
   class
-* The case instances of type `T` are not all `case object`s
+* The case instances of type `T` are not all `case object`s. (As an alternative
+  the `collect[T]` function will simply filter out `case class`s instead of throw
+  an error)
 
 ## Contributors
 
