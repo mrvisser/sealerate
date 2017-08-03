@@ -1,6 +1,6 @@
 # Sealerate
 
-[![Build Status](https://travis-ci.org/mrvisser/sealerate.png?branch=master)](https://travis-ci.org/mrvisser/sealerate)
+[![Build Status](https://travis-ci.org/mrvisser/sealerate.svg?branch=master)](https://travis-ci.org/mrvisser/sealerate)
 ![Current Version](https://img.shields.io/badge/version-0.0.5-brightgreen.svg?style=flat "0.0.5")
 [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202-blue.svg)](LICENSE)
 
