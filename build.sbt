@@ -38,7 +38,7 @@ resolvers ++= Seq(
   Resolver.sonatypeRepo("snapshots")
 )
 
-libraryDependencies += scalaVersion("org.scala-lang" % "scala-compiler" % _).value
+libraryDependencies += scalaVersion("org.scala-lang" % "scala-compiler" % _).value % Provided
 
 libraryDependencies ++= Seq(
   Dependencies.Test.scalaTest
