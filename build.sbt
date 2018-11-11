@@ -20,9 +20,9 @@ pomExtra := {
   </developers>
 }
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.7"
 
-crossScalaVersions := Seq("2.10.6", "2.11.11", "2.12.2")
+crossScalaVersions := Seq("2.10.7", "2.11.12", "2.12.7")
 
 scalacOptions ++= Seq(
   "-Xlint",
