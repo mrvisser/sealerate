@@ -3,6 +3,7 @@ scala:
   - 2.10.7
   - 2.11.12
   - 2.12.7
+  - 2.13.0-M5
 jdk:
   - openjdk6
   - openjdk7
@@ -15,4 +16,10 @@ matrix:
   - scala: 2.12.7
     jdk: openjdk7
   - scala: 2.12.7
+    jdk: oraclejdk7
+  - scala: 2.13.0-M5
+    jdk: openjdk6
+  - scala: 2.13.0-M5
+    jdk: openjdk7
+  - scala: 2.13.0-M5
     jdk: oraclejdk7
