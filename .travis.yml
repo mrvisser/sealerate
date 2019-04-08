@@ -2,7 +2,7 @@ language: scala
 scala:
   - 2.10.7
   - 2.11.12
-  - 2.12.7
+  - 2.12.8
   - 2.13.0-RC1
 jdk:
   - openjdk6
@@ -11,11 +11,11 @@ jdk:
   - oraclejdk8
 matrix:
  exclude:
-  - scala: 2.12.7
+  - scala: 2.12.8
     jdk: openjdk6
-  - scala: 2.12.7
+  - scala: 2.12.8
     jdk: openjdk7
-  - scala: 2.12.7
+  - scala: 2.12.8
     jdk: oraclejdk7
   - scala: 2.13.0-RC1
     jdk: openjdk6
