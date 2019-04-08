@@ -10,7 +10,7 @@ of a sealed class.
 
 ## Set Up
 
-Sealerate is available for Scala 2.10, 2.11, 2.12, and 2.13.0-M5. If you are using sbt, add
+Sealerate is available for Scala 2.10, 2.11, 2.12, and 2.13.0-RC1. If you are using sbt, add
 the following to your `build.sbt`:
 
 ```
