@@ -2,7 +2,7 @@ import sbt._
 
 object Dependencies {
   object Version {
-    val scalaTest = "3.0.8-RC2"
+    val scalaTest = "3.0.8"
   }
 
   object Test {
