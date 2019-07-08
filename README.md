@@ -51,5 +51,5 @@ Note that a compilation error is thrown if the following conditions aren't met:
 
 * [Branden Visser](https://github.com/mrvisser) (core maintainer)
 * [jibbers42](https://github.com/jibbers42) (Scala 2.12 support)
-* [Philippus Baalman](https://github.com/Philippus) (Scala 2.12 support)
+* [Philippus Baalman](https://github.com/Philippus) (Scala 2.12 & 2.13 support)
 * [Travis Brown](https://github.com/travisbrown) (library based on his [StackOverflow post](http://stackoverflow.com/a/13672520))
