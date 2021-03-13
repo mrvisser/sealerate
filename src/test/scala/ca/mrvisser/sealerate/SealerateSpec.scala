@@ -1,8 +1,9 @@
 package ca.mrvisser.sealerate
 
-import org.scalatest.{Matchers, path}
+import org.scalatest.funspec.PathAnyFunSpec
+import org.scalatest.matchers.should.Matchers
 
-class SealerateSpec extends path.FunSpec with Matchers {
+class SealerateSpec extends PathAnyFunSpec with Matchers {
 
   describe("values") {
     it("should give a list of values for sealed classes") {
